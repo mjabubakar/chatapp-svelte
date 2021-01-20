@@ -3,7 +3,7 @@
 
     import Container from "../components/index.svelte";
     const token = localStorage.getItem("socketToken");
-    export const socket = Socket("http://localhost:3001/", {
+    export const socket = Socket("https://chattapi.herokuapp.com/", {
         query: { token },
         reconnectionDelayMax: 10000,
     });

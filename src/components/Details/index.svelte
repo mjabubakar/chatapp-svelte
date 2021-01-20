@@ -116,7 +116,7 @@
 	{#if $searchUser}
 		<div class="users">
 			{#each users as user}
-				{#if $searchUser && user.username.includes($searchUser)}
+				{#if $searchUser && user.username.includes($searchUser.toLowerCase())}
 					<Friend
 						on:click={onclick(user.username, user.profilepic)}
 						type="user"

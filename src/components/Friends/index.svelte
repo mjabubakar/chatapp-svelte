@@ -192,14 +192,14 @@
 		<div on:click={Display} class="find">Find new friends</div>
 
 		{#each friends as friend, id}
-			{#if ($searchFriend && friend.username.includes($searchFriend) && friend.lastmessage) || (!$searchFriend && friend.lastmessage)}
+			{#if ($searchFriend && friend.username.includes($searchFriend.toLowerCase()) && friend.lastmessage) || (!$searchFriend && friend.lastmessage)}
 				<Friend
 					type="friend"
 					on:click={onclick(friend.username, friend.profilepic, id, friend.chatId, friend.online)}
 					{friend} />
 			{/if}
 		{:else}
-			<div on:click={Display} class="find">Find new friends</div>
+			<div />
 		{/each}
 	</div>
 </div>
