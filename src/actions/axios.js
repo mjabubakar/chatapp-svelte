@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 let urls = {
-  test: "http://localhost:3001",
+  test: "https://pure-plains-91675.herokuapp.com/https://chattapi.herokuapp.com/",
 };
 
 const fetcher = Axios.create({
