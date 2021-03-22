@@ -21,7 +21,7 @@ export const emailVal = (email) => {
 
 const validation = (email, password, confirmPassword, username, bio) => {
   if (username.length < 4 || username.length > 20)
-    "Username too long or too short";
+    return "Username too long or too short";
   if (!usernameVal(username)) return "Invalid username.";
   if (!emailVal(email)) return "Invalid email address.";
   if (password.length < 6) return "Password too short.";

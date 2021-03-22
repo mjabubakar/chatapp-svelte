@@ -2,9 +2,9 @@
     import { metatags, redirect, url } from "@roxi/routify";
 
     import { onMount } from "svelte";
+    import fetcher from "../../actions/axios";
 
-    import fetcher from "../../actions/axios.js";
-
+    fetcher;
     metatags.title = "Sign In";
 
     let token;
@@ -119,7 +119,7 @@
             on:click|preventDefault={onsubmit}>Login</button>
 
         <div class="text">
-            <a href={$url('/signup')}> Already have an account? Sign in. </a>
+            <a href={$url('/signup')}>Dont have an account? Sign Up.</a>
         </div>
     </form>
 {/if}

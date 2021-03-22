@@ -207,3 +207,34 @@
     }
   }
 </style>
+<<<<<<< HEAD
+=======
+
+<div class:display={$display !== 'one'} class="friends-container">
+	<div class="profile">
+		<div><img alt={res.username} src={res.profilepic} /></div>
+
+		<div class="details">
+			<div class="name">{res.username}</div>
+			<div class="bio">{res.bio}</div>
+		</div>
+	</div>
+
+	<SearchBar type="friend" />
+
+	<div class="friends">
+		<div on:click={Display} class="find">Find new friends</div>
+
+		{#each friends as friend, id}
+			{#if ($searchFriend && friend.username.includes($searchFriend.toLowerCase()) && friend.lastmessage) || (!$searchFriend && friend.lastmessage)}
+				<Friend
+					type="friend"
+					on:click={onclick(friend.username, friend.profilepic, id, friend.chatId, friend.online)}
+					{friend} />
+			{/if}
+		{:else}
+			<div />
+		{/each}
+	</div>
+</div>
+>>>>>>> 6785d826d2977d78f7ccd4eb103054518719f29d
