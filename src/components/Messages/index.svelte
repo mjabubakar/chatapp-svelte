@@ -153,8 +153,6 @@
 
         {#if !$online}
           <div />
-        {:else if !hoursAgo($online)}
-          <div />
         {:else if $online !== "Online"}
           <div class="online">Active {hoursAgo($online)}</div>
         {:else}
